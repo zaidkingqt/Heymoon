@@ -1,0 +1,43 @@
+; Engine configuration file.
+; Needle Quest - 3D hidden-needle search game for mobile.
+; Godot 4.3+
+
+config_version=5
+
+[application]
+
+config/name="Needle Quest"
+config/description="Find the needle hidden inside a huge 3D haystack. Dig, sweep, scan and discover treasures!"
+config/version="1.0.0"
+run/main_scene="res://scenes/Main.tscn"
+config/features=PackedStringArray("4.3")
+run/max_fps=60
+config/icon="res://icon.png"
+
+[autoload]
+
+Loc="*res://autoload/Loc.gd"
+SaveGame="*res://autoload/SaveGame.gd"
+Snd="*res://autoload/Snd.gd"
+Ads="*res://autoload/Ads.gd"
+G="*res://autoload/G.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=1280
+window/handheld/orientation=1
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=1
+environment/defaults/default_clear_color=Color(0.12, 0.14, 0.1, 1)
